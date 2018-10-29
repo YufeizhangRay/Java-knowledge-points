@@ -192,5 +192,16 @@ linux使用的进程间通信方式
 `UDDI `的目的是为电子商务建立标准；`UDDI`是一套基于`Web`的、分布式的、为`Web Service`提供的、信息注册中心的实现标准规范，同时也包含一组使企业能将自身提供的`Web Service`注册，以使别的企业能够发现的访问协议的实现标准。  
 `WSDL`是一种 `XML `格式，用于将网络服务描述为一组端点，这些端点对包含面向文档信息或面向过程信息的消息进行操作。这种格式首先对操作和消息进行抽象描述，然后将其绑定到具体的网络协议和消息格式上以定义端点。相关的具体端点即组合成为抽象端点（服务）。  
   
-
-
+在Java中，char类型占2个字节，而且Java默认采用Unicode编码，一个Unicode码是16位，所以一个Unicode码占两个字节，Java中无论汉子还是英文字母都是用Unicode编码来表示的。所以，在Java中，char类型变量可以存储一个中文汉字。  
+  
+a += b会自动强制转换  
+  
+byte[] byteArray = str.getBytes();  
+String str = new String(byteArray);  
+  
+如何将数值型字符转换为数字：Integer.parseInt(String.valueOf(ch))  
+  
+由于数组没有实现 toString() 方法，所以如果将数组传递给 System.out.println() 方法，将无法打印出数组的内容，但是 Arrays.toString() 可以打印每个元素。  
+  
+如果想使用 Java 中增强的循环来遍历，只需要实现 Iterable 接口。如果实现 Collection 接口，默认就具有该属性。  
+  
