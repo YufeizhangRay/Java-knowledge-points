@@ -11,7 +11,7 @@ Java琐碎知识点
 
 `Java`的赋值运算是`有返回值`的，赋了什么值，就返回什么值。  
 
-`replaceAll`方法的第一个参数可以是一个正则表达式，例如`"."`在正则表达式中表示`任何字符`，所以会把前面字符串的所有字符都替换。如果想替换的只是`"."`，那么久要写成`"\\."`  
+`replaceAll`方法的第一个参数可以是一个正则表达式，例如`"."`在正则表达式中表示`任何字符`，所以会把前面字符串的所有字符都替换。如果想替换的只是`"."`，那么要写成`"\\."` 。而 `replace`可以直接使用`"."`。
 
 `Json`格式：应该是需要加`引号`，并且是一对一对出现的。   
 
@@ -184,13 +184,7 @@ linux使用的进程间通信方式
 `JVM` 代表 `Java 虚拟机`（`Java virtual machine`），它的责任是运行 `Java` 应用。  
 `JIT `代表`即时编译`（`Just In Time compilation`），当代码执行的次数超过一定的`阈值`时，会将 `Java字节码`转换为`本地代码`，如，主要的热点代码会被准换为本地代码，这样有利大幅度提高 `Java` 应用的性能。  
   
-常用的开源Java Web容器有Tomcat、Resin和Jetty。  
-  
-`JAXP`(`Java API for XML Parsing`) 定义了在`Java`中使用`DOM`, `SAX`, `XSLT`的通用的接口。这样在你的程序中你只要使用这些通用的接口，当你需要改变具体的实现时候也不需要修改代码。  
-`JAXM`(`Java API for XML Messaging`) 是为`SOAP`通信提供访问方法和传输机制的`API`。  
-`SOAP`即简单对象访问协议(`Simple Object Access Protocol`)，它是用于交换XML编码信息的轻量级协议。  
-`UDDI `的目的是为电子商务建立标准；`UDDI`是一套基于`Web`的、分布式的、为`Web Service`提供的、信息注册中心的实现标准规范，同时也包含一组使企业能将自身提供的`Web Service`注册，以使别的企业能够发现的访问协议的实现标准。  
-`WSDL`是一种 `XML `格式，用于将网络服务描述为一组端点，这些端点对包含面向文档信息或面向过程信息的消息进行操作。这种格式首先对操作和消息进行抽象描述，然后将其绑定到具体的网络协议和消息格式上以定义端点。相关的具体端点即组合成为抽象端点（服务）。  
+常用的开源Java Web容器有Tomcat、Resin和Jetty。    
   
 在Java中，char类型占2个字节，而且Java默认采用Unicode编码，一个Unicode码是16位，所以一个Unicode码占两个字节，Java中无论汉子还是英文字母都是用Unicode编码来表示的。所以，在Java中，char类型变量可以存储一个中文汉字。  
   
@@ -204,4 +198,17 @@ String str = new String(byteArray);
 由于数组没有实现 toString() 方法，所以如果将数组传递给 System.out.println() 方法，将无法打印出数组的内容，但是 Arrays.toString() 可以打印每个元素。  
   
 如果想使用 Java 中增强的循环来遍历，只需要实现 Iterable 接口。如果实现 Collection 接口，默认就具有该属性。  
+  
+Object的所有方法：  
+>1.public final native Class<?> getClass()  
+2.public native int hashCode()  
+3.public boolean equals(Object obj)  
+4.protected native Object clone() throws CloneNotSupportedException  
+5.public String toString()  
+6.public final native void notify()  
+7.public final native void notifyAll()  
+8.public final native void wait(long timeout) throws InterruptedException  
+9.public final void wait(long timeout, int nanos) throws InterruptedException  
+10.public final void wait() throws InterruptedException  
+11.protected void finalize() throws Throwable { }  
   
