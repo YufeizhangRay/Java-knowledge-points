@@ -19,7 +19,7 @@ Java琐碎知识点
 
 `finally`语句块在`catch`语句块中的`return`语句之前执行。    
 `finally`块中的`return`语句会`覆盖`掉`try`块中的`return`返回。  
-`finally`语句是在`try`的`return`的`语句执行之后`，`return`本身`返回之前`执行。  
+`finally`语句是在`try`的`return`语句`执行之后`，`return`本身`返回之前`执行。  
 
 str+='      a' 有空格需要用`双引号`。  
 
