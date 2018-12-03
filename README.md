@@ -121,16 +121,7 @@ CyclicBarrier.await
 `Java`继承中对构造函数是`不继承`的，只是`显式`或者`隐式`调用。  
 
 `Java`的`object`默认的基本方法中没有`copy()`，含有如下方法：  
-`getClass()`, `hashCode()`, `equals()`, `clone()`, `toString()`, `notify()`, `notifyAll()`,  `wait()`, `finalize()` 
-
-优化`Hibernate`所鼓励的7大措施：  
->1.尽量使用`many-to-one`，避免使用单项`one-to-many`  
-2.灵活使用单向`one-to-many`  
-3.不用`one-to-one`，使用多`many-to-one`代替  
-4.配置对象缓存，不使用集合缓存  
-5.`one-to-many`使用Bag，`many-to-one`使用Set  
-6.继承使用显示多态 `HQL:from object polymorphism="exlicit"` 避免查处所有对象  
-7.消除大表，使用二级缓存  
+`getClass()`, `hashCode()`, `equals()`, `clone()`, `toString()`, `notify()`, `notifyAll()`,  `wait()`, `finalize()`   
   
 `wait()`方法要以`try/catch`包覆，或是掷出`InterruptedException`。  
 
